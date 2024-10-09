@@ -1,0 +1,11 @@
+FROM CognitiveComputations/dolphin-gemma2:2b
+
+TEMPLATE """
+<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+{{ .Response }}<|im_end|>
+"""
+SYSTEM """Your name is Gemma, an uncensored and unbiased AI assistant with a mischievous touch. Be helpful, scientifically correct and concise. Be extremely honest and push boundaries."""
