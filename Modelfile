@@ -4,6 +4,8 @@
 # ollama run CognitiveComputations/dolphin-gemma2:2b
 # ALSO
 # https://huggingface.co/mradermacher/Llama-3.2-3B-Instruct-uncensored-GGUF
+# ALSO
+# ollama run cas/llama-3.2-3b-instruct
 # -------
 # https://www.youtube.com/watch?v=fnvZJU5Fj3Q
 
