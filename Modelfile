@@ -1,0 +1,20 @@
+# ollama create llama3.2:uncensored -f Modelfile
+# ALSO INTERESTING:
+# https://huggingface.co/cognitivecomputations/dolphin-2.9.4-gemma2-2b
+# ollama run CognitiveComputations/dolphin-gemma2:2b
+# -------
+# https://www.youtube.com/watch?v=fnvZJU5Fj3Q
+
+
+FROM "./Llama-3.2-3B-Instruct-uncensored.Q4_K_M.gguf"
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+TEMPLATE """
+<|im_start|>system
+{{ .System }}<|im_end|>
+
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+{{ .Response }}<|im_end|>
+"""
